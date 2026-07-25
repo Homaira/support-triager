@@ -24,6 +24,7 @@
    message since the system prompt is sent on every call.
 
 ## Trade-offs
-[One sentence: e.g. "Reducing max_tokens risks truncation on more complex 
-cases; if triage responses start getting cut off, this should be raised 
-back up for the final round specifically."]
+The max_tokens cut to 900 is tuned to current test cases, not proven safe in
+general — if triage responses start getting cut off on more complex messages,
+that budget (particularly for the final round) should be raised back up
+rather than assumed safe indefinitely.
